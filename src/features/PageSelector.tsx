@@ -38,7 +38,7 @@ export const PageSelector: React.FC<PageSelectorProps> = ({
                 tabIndex={-1}
                 href={TCG_DATABASE}
                 shallow={true}
-                className={`${!!shouldAnimate ? `animate-fade-in` : null} ${!shouldAnimate ? "translate-y-0 opacity-0" : "translate-y-0 opacity-100"
+                className={`${!!shouldAnimate ? `animate-fade-in` : null} ${!shouldAnimate ? "translate-y-0 opacity-0 pointer-events-none" : "translate-y-0 opacity-100"
                     } ${container}`}
             >
                 <img className={image} src="/pokemon/img/mmcs.jpg" alt="" />

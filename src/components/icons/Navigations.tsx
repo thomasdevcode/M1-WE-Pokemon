@@ -1,4 +1,4 @@
-import { GameTab } from "@/interfaces/types";
+import { GameTab, FunTab } from "@/interfaces/types";
 
 /**
  * Pokemon SVG Icon
@@ -353,52 +353,93 @@ export const MENU_LIST: {
     background: string;
     color: string;
 }[] = [
-    {
-        tab: "moves",
-        Icon: MovesIcon,
-        background: "#A60000",
-        color: "#ffd6d6",
-    },
-    {
-        tab: "evolutions",
-        Icon: EvolutionsIcon,
-        background: "#9C531F",
-        color: "#f8e8dd",
-    },
-    {
-        tab: "machines",
-        Icon: MachinesIcon,
-        background: "#A1871F",
-        color: "#f8f3dd",
-    },
-    {
-        tab: "pokemon",
-        Icon: PokemonIcon,
-        background: "#4E8234",
-        color: "#e8f3e2",
-    },
-    {
-        tab: "calculator",
-        Icon: CalculatorIcon,
-        background: "#045B8A",
-        color: "#d7f0fe",
-    },
-    {
-        tab: "berries",
-        Icon: BerriesIcon,
-        background: "#445E9C",
-        color: "#e3e7f3",
-    },
-    {
-        tab: "items",
-        Icon: ItemsIcon,
-        background: "#4b0478",
-        color: "#efd7fe",
-    },
-    {
-        tab: "return",
-        Icon: ReturnIcon,
-        background: "#A13959",
-        color: "#f4e1e7",
-    },
-];
+        {
+            tab: "moves",
+            Icon: MovesIcon,
+            background: "#A60000",
+            color: "#ffd6d6",
+        },
+        {
+            tab: "evolutions",
+            Icon: EvolutionsIcon,
+            background: "#9C531F",
+            color: "#f8e8dd",
+        },
+        {
+            tab: "machines",
+            Icon: MachinesIcon,
+            background: "#A1871F",
+            color: "#f8f3dd",
+        },
+        {
+            tab: "pokemon",
+            Icon: PokemonIcon,
+            background: "#4E8234",
+            color: "#e8f3e2",
+        },
+        {
+            tab: "calculator",
+            Icon: CalculatorIcon,
+            background: "#045B8A",
+            color: "#d7f0fe",
+        },
+        {
+            tab: "berries",
+            Icon: BerriesIcon,
+            background: "#445E9C",
+            color: "#e3e7f3",
+        },
+        {
+            tab: "items",
+            Icon: ItemsIcon,
+            background: "#4b0478",
+            color: "#efd7fe",
+        },
+        {
+            tab: "return",
+            Icon: ReturnIcon,
+            background: "#A13959",
+            color: "#f4e1e7",
+        },
+    ];
+
+/**
+ * Menu navigation list for fun games
+ */
+export const FUN_MENU_LIST: {
+    tab: FunTab;
+    Icon: React.FC;
+    background: string;
+    color: string;
+}[] = [
+        {
+            tab: "tierlist",
+            Icon: MovesIcon,
+            background: "#A60000",
+            color: "#ffd6d6",
+        },
+        {
+            tab: "teambuilder",
+            Icon: PokemonIcon,
+            background: "#4E8234",
+            color: "#e8f3e2",
+        },
+        {
+            tab: "typecalculator",
+            Icon: CalculatorIcon,
+            background: "#045B8A",
+            color: "#d7f0fe",
+        },
+        {
+            tab: "quiz",
+            Icon: ItemsIcon,
+            background: "#4b0478",
+            color: "#efd7fe",
+        },
+        {
+            tab: "return",
+            Icon: ReturnIcon,
+            background: "#A13959",
+            color: "#f4e1e7",
+        },
+    ];

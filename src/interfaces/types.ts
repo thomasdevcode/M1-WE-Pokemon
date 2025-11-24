@@ -9,4 +9,14 @@ export type GameTab =
     "calculator" |
     "berries" |
     "items" |
-    "return"
+    "return";
+
+/**
+ * Fun games navigational tabs
+ */
+export type FunTab =
+    "tierlist" |
+    "teambuilder" |
+    "typecalculator" |
+    "quiz" |
+    "return";
