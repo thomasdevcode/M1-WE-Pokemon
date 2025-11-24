@@ -1,4 +1,4 @@
-import { GAME_DATABASE, TCG_DATABASE } from "@/constants/routes";
+import { GAME_DATABASE, TCG_DATABASE, FUN_GAMES } from "@/constants/routes";
 import Link from "next/link";
 
 type PageSelectorProps = {
@@ -14,7 +14,7 @@ export const PageSelector: React.FC<PageSelectorProps> = ({
     shouldAnimate,
 }) => {
     const container =
-        "group cursor-pointer h-[50dvh] shrink-0 sm:h-[50vh] w-screen overflow-hidden transition-transform duration-500 flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl xl:text-5xl";
+        "group cursor-pointer h-[33.333dvh] shrink-0 sm:h-[33.333vh] w-screen overflow-hidden transition-transform duration-500 flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl xl:text-5xl";
     const image =
         "sm:group-hover:scale-[1.01] transition-transform absolute w-full h-full object-cover";
     const text =
@@ -28,9 +28,8 @@ export const PageSelector: React.FC<PageSelectorProps> = ({
                 tabIndex={-1}
                 href={GAME_DATABASE}
                 shallow={true}
-                className={`${!!shouldAnimate ? `animate-slide-down` : null} ${
-                    !shouldAnimate ? "-translate-y-full" : "translate-y-0"
-                } ${container}`}
+                className={`${!!shouldAnimate ? `animate-slide-down` : null} ${!shouldAnimate ? "-translate-y-full" : "translate-y-0"
+                    } ${container}`}
             >
                 <img className={image} src="/pokemon/img/mmgs.jpg" alt="" />
                 <div className={text}>Game Database</div>
@@ -39,12 +38,21 @@ export const PageSelector: React.FC<PageSelectorProps> = ({
                 tabIndex={-1}
                 href={TCG_DATABASE}
                 shallow={true}
-                className={`${!!shouldAnimate ? `animate-slide-up` : null} ${
-                    !shouldAnimate ? "translate-y-full" : "translate-y-0"
-                } ${container}`}
+                className={`${!!shouldAnimate ? `animate-fade-in` : null} ${!shouldAnimate ? "translate-y-0 opacity-0" : "translate-y-0 opacity-100"
+                    } ${container}`}
             >
                 <img className={image} src="/pokemon/img/mmcs.jpg" alt="" />
                 <div className={text}>TCG Database</div>
+            </Link>
+            <Link
+                tabIndex={-1}
+                href={FUN_GAMES}
+                shallow={true}
+                className={`${!!shouldAnimate ? `animate-slide-up` : null} ${!shouldAnimate ? "translate-y-full" : "translate-y-0"
+                    } ${container}`}
+            >
+                <img className={image} src="/pokemon/img/mmfs.jpg" alt="" />
+                <div className={text}>Fun Games</div>
             </Link>
         </div>
     );
