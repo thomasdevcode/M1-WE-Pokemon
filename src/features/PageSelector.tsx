@@ -52,7 +52,7 @@ export const PageSelector: React.FC<PageSelectorProps> = ({
                     } ${container}`}
             >
                 <img className={image} src="/pokemon/img/mmfs.jpg" alt="" />
-                <div className={text}>Fun Games</div>
+                <div className={text}>Miscellaneous</div>
             </Link>
         </div>
     );
