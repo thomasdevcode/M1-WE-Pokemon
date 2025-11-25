@@ -87,7 +87,7 @@ const Page: React.FC = () => {
     const accuracy = total > 0 ? Math.round((score / total) * 100) : 0;
 
     return (
-        <div className="w-full h-full flex items-center justify-center bg-base-white relative">
+        <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-blue-400 via-purple-400 to-pink-400 relative">
             <div className="absolute top-4 right-4 bg-white shadow-md px-4 py-2 rounded-md">
                 <p className="text-xl font-bold">Score : {score}/{total}</p>
                 <p className="text-sm text-gray-600">{accuracy}%</p>
