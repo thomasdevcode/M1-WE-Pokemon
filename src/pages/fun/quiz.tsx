@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 
 interface PokemonBasic {
     name: string;
@@ -18,6 +19,7 @@ interface PokemonData {
 const getRandomInt = (max: number) => Math.floor(Math.random() * max);
 
 const Page: React.FC = () => {
+    const router = useRouter();
     const [pokemonList, setPokemonList] = useState<PokemonBasic[]>([]);
     const [correctPokemon, setCorrectPokemon] = useState<PokemonData | null>(null);
     const [options, setOptions] = useState<string[]>([]);
@@ -88,6 +90,13 @@ const Page: React.FC = () => {
 
     return (
         <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-blue-400 via-purple-400 to-pink-400 relative">
+            <button
+                onClick={() => router.back()}
+                className="absolute top-4 left-4 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all backdrop-blur-sm border border-white/30"
+            >
+                ← Return
+            </button>
+
             <div className="absolute top-4 right-4 bg-white shadow-md px-4 py-2 rounded-md">
                 <p className="text-xl font-bold">Score : {score}/{total}</p>
                 <p className="text-sm text-gray-600">{accuracy}%</p>
@@ -100,9 +109,7 @@ const Page: React.FC = () => {
                     <img
                         src={correctPokemon.sprites.front_default}
                         alt="pokemon silhouette"
-                        className={`w-48 h-48 mx-auto mb-6 transition-all duration-0 ${
-                            showAnswer ? "" : "brightness-0"
-                        }`}
+                        className={`w-48 h-48 mx-auto mb-6 transition-all duration-0 ${showAnswer ? "" : "brightness-0"}`}
                     />
                 )}
 
